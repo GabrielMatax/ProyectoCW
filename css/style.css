@@ -257,14 +257,14 @@ img{
                                 /* PRODUCTOS */ 
 
 .productos__grilla{
-    height: 1200px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 300px 300px 300px;
     grid-template-areas: "filtros filtros filtros"
                          "prd1 prd2 prd3"
                          "prd4 prd5 prd6"
-                         "prd7 prd8 prd9";
+                         "prd7 prd8 prd9"
+                         "footer footer footer";
     justify-content: space-around;
     align-content: space-between;
     align-items: center;
@@ -299,7 +299,7 @@ img{
 .productos{
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 80%;
     align-items: center;
     width: 80%;
 }
@@ -317,7 +317,8 @@ img{
     justify-content: space-evenly;
     justify-items:center;  
     align-content: center;
-    padding: 3rem 1rem;
+    gap: 5rem;
+    padding-bottom: 5rem;
 }
 
 .informacion_titulo{
@@ -342,13 +343,17 @@ img{
     gap: 2rem;
     align-items:center;
     text-align: center;
+    justify-content: center;
 }
 
 .grilla_mouses{
-    height: 750px;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 80%;
-    grid-template-areas: "infmouse1 infmouse2 infmouse3";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:"imgmouse imgmouse imgmouse" 
+    "infmouse1 infmouse2 infmouse3";
+}
+
+.imagen_inf_mouse{
+    grid-area: imgmouse;
 }
 
 .informacion_mouses{ 
@@ -361,16 +366,26 @@ img{
 }
 
 .grilla_pad{
-    height: 700px;
-    grid-template-columns: 45% 45%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas:
-                        "infpad1 infpad1"
-                        "infpad2 infpad3";                    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:"imgpad imgpad imgpad"
+                        "infpad1 infpad1 infpad1"
+                        "infpad2 . infpad3";              
+}
+
+.imagen_inf_pad{
+    grid-area: imgpad;
 }
 
 .informacion_pad{
-    width: 60%;
+    width: 80%;
+}
+
+.tipos_pad-uno{
+    grid-area: infpad2;
+}
+
+.tipos_pad-dos{
+    grid-area: infpad3;
 }
 
 .pad_descripcion{
@@ -379,25 +394,31 @@ img{
 }
 
 .grilla_bungee{
-    height: 500px;
-    grid-template-columns: 80%;
-    grid-template-rows: 80%;
-    grid-template-areas: "infbungee1";
+    grid-template-columns: 1fr;
+    grid-template-areas:"imgbung" 
+                        "infbungee1";
+}
+
+.imagen_inf_bungee{
+    grid-area: imgbung;
 }
 
 .informacion_bungee{
-    width: 75%;
+    width: 55%;
 }
 
 .grilla_simulador{
-    height: 500px;
-    grid-template-columns: 45% 45%;
-    grid-template-rows: 90%;
-    grid-template-areas: "infsimulador1 infsimulador2";
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"imgsim imgsim" 
+                        "infsimulador1 infsimulador2";
+}
+
+.imagen_inf_simulador{
+    grid-area: imgsim;
 }
 
 .informacion_simulador{
-    width: 75%;
+    width: 80%;
 }
 
 
@@ -405,36 +426,33 @@ img{
                                 /* COMUNIDAD */
 
 .comunidad_banner{
-background-image:url(../img/gente-jugando.jpg);
-height: 1100px;
+    background-image:url(../img/gente-jugando.jpg);
+    height: 1100px;
 }                                
 
 .comunidad_fotos_grilla{
     display: grid;
-    height: 1000px;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 30% 30% 30%;
-    justify-content: center;  
+    grid-template-columns: 30% 30% 30%; 
+    padding: 4rem 1rem;
     align-content: center;
-    align-items: stretch;
-    justify-items: stretch;
-    padding: 3rem 1rem;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 .comunidad_fotos_grilla img{
     border: solid 3px;
     border-color: black;
+    width: 100%;
+    height: 100%;
 }
 
 .comunidad_noticias_grilla{
     display: grid;
-    height: 500px;
     grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 90%;
     justify-content: space-evenly;  
     justify-items: center;
     align-content: center;
-    padding: 3rem 1rem;
+    padding: 1rem 1rem;
 }
 
 .comunidad_noticias{
@@ -443,7 +461,8 @@ height: 1100px;
     gap: 2rem;
     align-items:center;
     text-align: center;
-    width: 60%;
+    width: 65%;
+    padding-bottom: 5rem;
 }
 
 
@@ -451,22 +470,29 @@ height: 1100px;
                                 /* CONTACTO */
 
 .contactos_banner{
-    background-image:url();
-    height: 1000px;
+    background-image:url(../img/gente-jugando.jpg); /* voy a cambiar la imagen*/
+    height: 1100px;
 }   
 
 .formulario{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content:space-between;
     align-items: center;
-    height: 800px;
-    margin: 0rem 1rem ;
+    align-content: center;
+    justify-items: center;
+    padding: 2rem 0rem;
+    margin: 2rem 1rem ;
     border-bottom: solid 1px;
-    border-color: black;    
+    border-color: black; 
+    gap: 4rem;   
 }
 
 form{
-    width: 50%;    
+    width: 50%; 
+    font-family:'IBM Plex Sans Thai Looped', sans-serif;
+    font-size: larger;
+    font-weight: 600;
 }
 
 .formulario__informacion{        
@@ -474,18 +500,33 @@ form{
     justify-content: space-evenly;
     flex-direction: column;   
     align-items:center;
-    height: 700px;
     width: 85%;   
 }
 
 .formulario__texto{
-    max-width: 35%;
+    width: 60%;
     display: flex;
     flex-direction: column;   
-    padding-left: 4rem;   
+    padding-left: 4rem;  
+    gap: 2rem; 
 }
 
+.preguntas_grilla{
+    grid-template-columns: 1fr 1fr;
+    padding-top: 5rem;
+    margin: 0rem 1rem ;
+    border-bottom: solid 1px;
+    border-color: black;   
+}
 
+.contacto_grilla-abajo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    justify-items:center;
+    align-items: center;
+    padding: 4rem 0rem;
+}
 
                                 /* FOOTER */
 
@@ -545,30 +586,14 @@ footer{
 
 
 @media only screen and (max-width:600px){
-    body{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas:"header"
-                            "nav"
-                            "main"
-                            "footer";
-    }
-
-    header{
-        grid-area:header;
-    }
     .header__div h1{
         font-size: 50px;
     }
     .navegador{
-        grid-area: nav;
         position: static;
     }
     .navegador ul{
         flex-direction: column;
-    }
-    main{
-        grid-area: main;
     }
     .inicio{
         display: flex;
@@ -601,9 +626,6 @@ footer{
         letter-spacing: 0.5px;
         line-height: 1.3;
     }
-    footer{
-        grid-area: footer;
-    }
     .footer_subtitulo{
         font-size:18px;
         flex-direction: column;
@@ -615,6 +637,101 @@ footer{
     }
     .iconos_redes{
         gap: 9rem;
+    }
+                            /* PRODUCTOS */
+   .productos__grilla{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px;
+    grid-template-areas: "filtros"
+                         "prd1" "prd2" "prd3"
+                         "prd4" "prd5" "prd6"
+                         "prd7" "prd8" "prd9"
+                         "footer";
+    justify-content: space-around;
+    align-content: space-between;
+    align-items: center;
+    justify-items: center;   
+    padding: 0px 0px 3rem 0px;
+    }                       
+    .productos{
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+    }
+                                /* INFORMACION */ 
+    .introduccion_msg div{
+    width: 70%;
+    }
+    .grilla_mouses{
+    grid-template-columns: 1fr;
+    grid-template-areas:"imgmouse" 
+    "infmouse1" "infmouse2" "infmouse3";
+    }
+    .informacion_mouses_img{
+        width: 30%;
+    }
+    .grilla_pad{
+    grid-template-columns: 1fr;
+    grid-template-areas:"imgpad"
+                        "infpad1"
+                        "infpad2" 
+                        "infpad3";              
+    }   
+    .pad_descripcion{
+    grid-area: infpad1;
+    width: 80%;
+    }
+    .informacion_bungee{
+        width: 80%;
+    }
+    .grilla_simulador{
+        grid-template-columns: 1fr;
+        grid-template-areas:"imgsim" 
+                            "infsimulador1"
+                            "infsimulador2";
+    }
+    .informacion_titulo{
+        font-size: 30px;
+    }
+    .informacion_parrafo{
+        font-size:16px;
+    }
+                                /* COMUNIDAD */   
+    .bienvenidos div{
+        width: 80%;
+    }
+    .bienvenidos div h2{
+        font-size: 50px;  
+    }      
+    .comunidad_fotos_grilla{
+        grid-template-columns: 90%;
+    }
+    .comunidad_noticias_grilla{
+        grid-template-columns: 90%;
+    } 
+    .comunidad_noticias{
+        width: 80%;
+    } 
+                                /* CONTACTO */  
+    .formulario{
+        grid-template-columns: 1fr;      
+    }
+    form{
+        width: 100%;
+    }
+    .formulario__informacion{
+        width: 100%;
+    }
+    .formulario__texto{
+        width: 80%;
+        padding: 0%;
+    }
+    .preguntas_grilla{
+        grid-template-columns: 1fr; 
+    }
+    .contacto_grilla-abajo{
+        grid-template-columns: 1fr;
     }
 }
 
