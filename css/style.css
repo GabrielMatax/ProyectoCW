@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+main{
+    overflow: hidden;
+}
+
 .header__div h1{ 
     font-weight: 500;
     font-size: 70px;
@@ -246,10 +250,9 @@ img{
 }
 
 .inicio__img{
-    background-color: black;
-    background-size: cover;
     max-width: 50%; 
-        
+    max-height: 600px;
+    object-fit: contain;   
 }
 
 
@@ -311,6 +314,10 @@ img{
     font-family:'IBM Plex Sans Thai Looped', sans-serif;
     font-weight: 600;
     font-size: 22px;
+}
+
+.productos_btn_color{
+    background-color: #1DA1F2;
 }
 
 
