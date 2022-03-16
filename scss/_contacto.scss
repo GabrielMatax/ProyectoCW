@@ -1,0 +1,72 @@
+/* CONTACTO */
+
+.contactos_banner{
+    background-image:url(../img/gente-jugando.jpg); /* voy a cambiar la imagen*/
+    height: 1100px;
+}   
+
+.formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content:space-between;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    padding: 3rem 0rem;
+    margin: 0rem 1rem ;
+    border-bottom: solid 1px;
+    border-color: black; 
+    gap: 4rem;   
+    background-color: $colorPrincipal;
+
+    .formulario__texto{
+        width: 90%;
+        display: flex;
+        flex-direction: column;   
+        padding-left: 4rem;  
+        gap: 2rem; 
+    }
+
+    form{ 
+        font-family:'IBM Plex Sans Thai Looped', sans-serif;
+        font-size: larger;
+        font-weight: 600;
+        margin-bottom: 1rem;
+
+        textarea{
+            width: 100%;
+        }
+    }
+}
+
+.preguntas_grilla{
+    grid-template-columns: 1fr 1fr;
+    padding-top: 5rem;
+    margin: 0rem 1rem ;
+    border-bottom: solid 1px;
+    border-color: black;
+
+    .accordion-item{
+    width: 100%;
+    }
+    .contacto_noticias{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items:center;
+        text-align: center;
+        width: 65%;
+        padding-bottom: 5rem;
+    }
+}
+
+
+.contacto_grilla-abajo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    justify-items:center;
+    align-items: center;
+    padding: 4rem 0rem;
+    background-color: $colorPrincipal;
+}
