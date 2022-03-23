@@ -32,20 +32,23 @@
     padding-left: 3rem;
 
     .inicio__titulo{
-        font-size: 60px;
+        font-size: 66px;
         font-weight: 400;
         font-family: 'Teko', sans-serif;
         text-align:left;
-        line-height: 1;
+        line-height: 0.9;
         color: $colorTitulos;
-        text-decoration:  2px underline;
-        text-decoration-color: royalblue;
-        max-width: 66%;   
+        max-width: 77%; 
+        display: flex;
+        flex-direction: column;
+        &::after{
+            content:"──";
+        }  
     }
     .inicio__parrafo{
         color: $colorParrafos;
         font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-        font-size:large;
+        font-size:20px;
         font-weight: 600;
         line-height:1.2;
         margin-top: 20px;
@@ -53,26 +56,13 @@
         text-align: left;
     }
     .inicio__boton{
-        outline: none;
-        border: none;
-        background-color: rgb(95, 212, 248);
-        border-radius: 5px;
+        @include botones (rgb(95, 212, 248),rgba(59, 110, 250, 0.966),20px,rgb(2, 5, 51));
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &:hover{
-            background-color: rgb(115, 180, 200);
-        }
+        padding: 0;
+        transition: 300ms;
         .inicio__link{
             text-decoration:underline; 
             text-decoration-color: rgb(2, 5, 51);
-            color: rgb(2, 5, 51);
-            font-size: 20px;
-            font-family: 'Teko', sans-serif;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }            
+        }        
     }
 }

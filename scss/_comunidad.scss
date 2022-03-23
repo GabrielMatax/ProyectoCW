@@ -2,7 +2,7 @@
 
 .comunidad_banner{
     background-image:url(../img/gente-jugando.jpg);
-    height: 1100px;
+    height: 1000px;
 }                                
 
 .comunidad_fotos_grilla{
@@ -29,13 +29,10 @@
 }
 
 .comunidad_noticias_grilla{
-    display: grid;
+    @extend .informacion_grillas;
     grid-template-columns: 30% 30% 30%;
-    justify-content: space-evenly;  
-    justify-items: center;
-    align-content: center;
     padding: 5rem 1rem 1rem 1rem;
-    background-color: $colorPrincipal;
+    gap: 0;
 
     .comunidad_noticias{
         display: flex;

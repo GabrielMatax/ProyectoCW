@@ -20,6 +20,7 @@
 }
 
 .grilla_mouses{
+    @extend .informacion_grillas;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:"imgmouse imgmouse imgmouse" 
     "infmouse1 infmouse2 infmouse3";
@@ -30,6 +31,7 @@
     }
     
     .informacion_mouses{ 
+        @extend .informacion_general;
         width: 80%;
 
         .informacion_mouses_img{
@@ -40,6 +42,7 @@
 }
 
 .grilla_pad{
+    @extend .informacion_grillas;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:"imgpad imgpad imgpad"
                         "infpad1 infpad1 infpad1"
@@ -51,6 +54,7 @@
     }        
     
     .informacion_pad{
+        @extend .informacion_general;
         width: 80%;
     }
     .tipos_pad-uno{
@@ -66,6 +70,7 @@
 }
 
 .grilla_bungee{
+    @extend .informacion_grillas;
     grid-template-columns: 1fr;
     grid-template-areas:"imgbung" 
                         "infbungee1";
@@ -76,11 +81,13 @@
     }
 
     .informacion_bungee{
+        @extend .informacion_general;
         width: 55%;
     }                    
 }
 
 .grilla_simulador{
+    @extend .informacion_grillas;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:"imgsim imgsim" 
                         "infsimulador1 infsimulador2";
@@ -91,6 +98,11 @@
     }
     
     .informacion_simulador{
-        width: 80%;
+        @extend .informacion_general;
+        width: 65%;
     }
+}
+
+.carousel-item{
+    max-height: 900px;
 }

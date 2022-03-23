@@ -1,0 +1,80 @@
+/* FOOTER */
+
+footer{ 
+    background-color: rgb(29, 28, 28);
+    margin-top: 2px;  
+}
+
+.footer_subtitulo{
+    color: $colorLetrasFooter; 
+    display: flex;
+    list-style-type: none;   
+    padding: 20px 20px;
+    font-family: 'Times New Roman', Times, serif; 
+    font-size: larger;  
+    justify-content: space-between;  
+    flex-wrap: wrap;
+}
+
+.footer_links{
+    color: $colorLetrasFooter; 
+    text-decoration: none;
+    &:hover{
+        color: white;
+    }  
+}
+
+.footer_help{
+    color: $colorLetrasFooter; 
+    text-decoration: none;
+    transition: 300ms;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.footer_div{
+    padding: 60px 10px 5px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .iconos_redes{
+        display:flex;
+        flex-direction: row;
+        font-size: 2.5rem;
+        justify-content: space-between;
+        gap: 5rem;
+
+        .fa-instagram-square:hover{
+            transition: 300ms;
+            color: rgb(226, 87, 133); 
+            transform: scale(1.1);
+        }
+        .fa-twitter-square:hover{
+            transition: 300ms;
+            color: #1DA1F2;
+            transform: scale(1.1);
+        }
+        .fa-facebook-square:hover{
+            transition: 300ms;
+            color: #3b5998;
+            transform: scale(1.1);
+        }
+        .fa-whatsapp-square:hover{
+            transition: 300ms;
+            color: #25D366;
+            transform: scale(1.1);
+        }
+    }
+
+    .notificaciones{ 
+        font-family: 'Times New Roman', Times, serif;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        height: 38px;  
+    }   
+}
