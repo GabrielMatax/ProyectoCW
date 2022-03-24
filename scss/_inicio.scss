@@ -43,6 +43,7 @@
         flex-direction: column;
         &::after{
             content:"──";
+            letter-spacing: 0;
         }  
     }
     .inicio__parrafo{

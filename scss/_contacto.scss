@@ -50,6 +50,9 @@
 
     .accordion-item{
     width: 100%;
+        .accordion-body{
+            text-align: left;
+        }
     }
     .contacto_noticias{
         display: flex;

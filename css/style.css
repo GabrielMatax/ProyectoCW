@@ -127,14 +127,19 @@ img {
     padding-top: 5%;
     letter-spacing: 3px;
     line-height: 1;
-    text-decoration: underline; }
+    -webkit-text-stroke: 2px #102424;
+    text-decoration: underline;
+    text-decoration-color: white; }
   .header__div .logo_banner {
     height: 21%;
     width: 8%;
     z-index: 10;
     min-height: 110px;
     min-width: 81px;
-    padding-top: 1rem; }
+    padding-top: 1rem;
+    transition: 300ms; }
+    .header__div .logo_banner:hover {
+      transform: scale(1.05); }
 
 .navegador {
   background-color: rgba(254, 254, 254, 0.938);
@@ -221,7 +226,8 @@ img {
     display: flex;
     flex-direction: column; }
     .inicio__div .inicio__titulo::after {
-      content: "──"; }
+      content: "──";
+      letter-spacing: 0; }
   .inicio__div .inicio__parrafo {
     color: black;
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
@@ -397,6 +403,7 @@ img {
 .comunidad_fotos_grilla {
   display: grid;
   grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 1f 1fr 1fr;
   padding: 4rem 1rem;
   align-content: center;
   justify-content: center;
@@ -408,7 +415,8 @@ img {
     border-color: black;
     width: 100%;
     height: 100%;
-    transition: 400ms; }
+    transition: 400ms;
+    object-fit: cover; }
     .comunidad_fotos_grilla img:hover {
       transform: scale(1.06); }
 
@@ -421,9 +429,12 @@ img {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    text-align: center;
+    text-align: left;
     width: 65%;
     padding-bottom: 5rem; }
+    .comunidad_noticias_grilla .comunidad_noticias .card-title {
+      padding-bottom: 1rem;
+      font-size: 24px; }
 
 /* CONTACTO */
 .contactos_banner {
@@ -466,6 +477,8 @@ img {
   border-color: black; }
   .preguntas_grilla .accordion-item {
     width: 100%; }
+    .preguntas_grilla .accordion-item .accordion-body {
+      text-align: left; }
   .preguntas_grilla .contacto_noticias {
     display: flex;
     flex-direction: column;
@@ -550,6 +563,8 @@ footer {
 
 /* MEDIASQUERY */
 @media only screen and (max-width: 600px) {
+  .header__div {
+    max-height: 300px; }
   .header__div h1 {
     font-size: 50px; }
   .navegador {
