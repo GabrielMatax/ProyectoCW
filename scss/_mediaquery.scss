@@ -13,6 +13,14 @@
     .navegador ul{
         flex-direction: column;
     }
+    .bienvenidos{
+        max-height: 700px;
+        div{
+            p{
+                font-size: 21px;
+            }
+        }
+    }
     .inicio{
         display: flex;
         flex-direction: column;
@@ -39,7 +47,7 @@
         padding: 10px 10px;
     }
     .inicio__img{
-        max-width: 60%;
+        max-width: 80%;
     }
     .reversa{
         flex-flow: wrap-reverse;
@@ -115,6 +123,9 @@
         grid-template-areas:"imgsim" 
                             "infsimulador1"
                             "infsimulador2";
+    }
+    .carousel-item{
+        max-height: 308px;
     }
     .informacion_titulo{
         font-size: 30px;

@@ -45,19 +45,32 @@
         flex-direction: column;
         align-items: center;
         width: 85%;
+        height: 520px;
         transition: 500ms;
 
+        img{
+            object-fit: contain;
+            height: 400px;
+        }
         &:hover{
             transform: scale(1.05);
         }
-        .productos__nombre{
-            font-family:'IBM Plex Sans Thai Looped', sans-serif;
-            font-weight: 600;
-            font-size: 22px;
-        }
-        .productos_btn_color{
-            @include botones (rgba(59, 110, 250, 0.966) ,rgb(95, 212, 248), 20px, rgb(255, 255, 255));
-            transition: 300ms;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .productos__nombre{
+                font-family:'IBM Plex Sans Thai Looped', sans-serif;
+                font-weight: 600;
+                font-size: 22px;
+            }
+            .productos_btn_color{
+                @include botones (rgba(59, 110, 250, 0.966) ,rgb(95, 212, 248), 20px, rgb(255, 255, 255));
+                transition: 300ms;
+            }
         }
     }
 }

@@ -63,7 +63,7 @@ img {
       text-decoration: underline 4px; }
     .bienvenidos div p {
       font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 500;
       line-height: 1.2;
       color: white; }
@@ -301,33 +301,42 @@ img {
     flex-direction: column;
     align-items: center;
     width: 85%;
+    height: 520px;
     transition: 500ms; }
+    .productos__grilla .productos img {
+      object-fit: contain;
+      height: 400px; }
     .productos__grilla .productos:hover {
       transform: scale(1.05); }
-    .productos__grilla .productos .productos__nombre {
-      font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-      font-weight: 600;
-      font-size: 22px; }
-    .productos__grilla .productos .productos_btn_color {
-      background-color: rgba(59, 110, 250, 0.966);
-      outline: none;
-      border: none;
-      border-radius: 5px;
+    .productos__grilla .productos div {
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      align-items: center;
-      padding: 6px 12px;
-      transition: 300ms; }
-      .productos__grilla .productos .productos_btn_color:hover {
-        background-color: #5fd4f8; }
-      .productos__grilla .productos .productos_btn_color a {
-        font-size: 20px;
-        color: white;
-        text-decoration: none;
-        font-family: 'Teko', sans-serif;
-        font-weight: 400;
-        letter-spacing: 1px;
-        line-height: 1.2; }
+      align-items: center; }
+      .productos__grilla .productos div .productos__nombre {
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+        font-weight: 600;
+        font-size: 22px; }
+      .productos__grilla .productos div .productos_btn_color {
+        background-color: rgba(59, 110, 250, 0.966);
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px 12px;
+        transition: 300ms; }
+        .productos__grilla .productos div .productos_btn_color:hover {
+          background-color: #5fd4f8; }
+        .productos__grilla .productos div .productos_btn_color a {
+          font-size: 20px;
+          color: white;
+          text-decoration: none;
+          font-family: 'Teko', sans-serif;
+          font-weight: 400;
+          letter-spacing: 1px;
+          line-height: 1.2; }
 
 /* INFORMACION */
 .informacion_grillas, .grilla_mouses, .grilla_pad, .grilla_bungee, .grilla_simulador, .comunidad_noticias_grilla, .preguntas_grilla {
@@ -398,12 +407,13 @@ img {
 /* COMUNIDAD */
 .comunidad_banner {
   background-image: url(../img/gente-jugando.jpg);
-  height: 1000px; }
+  height: 1000px;
+  background-position: center; }
 
 .comunidad_fotos_grilla {
   display: grid;
   grid-template-columns: 30% 30% 30%;
-  grid-template-rows: 1f 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   padding: 4rem 1rem;
   align-content: center;
   justify-content: center;
@@ -422,16 +432,14 @@ img {
 
 .comunidad_noticias_grilla {
   grid-template-columns: 30% 30% 30%;
-  padding: 5rem 1rem 1rem 1rem;
-  gap: 0; }
+  justify-content: center;
+  padding: 5rem 1rem 5rem 1rem; }
   .comunidad_noticias_grilla .comunidad_noticias {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-items: center;
     text-align: left;
-    width: 65%;
-    padding-bottom: 5rem; }
+    width: 75%; }
     .comunidad_noticias_grilla .comunidad_noticias .card-title {
       padding-bottom: 1rem;
       font-size: 24px; }
@@ -571,6 +579,10 @@ footer {
     position: static; }
   .navegador ul {
     flex-direction: column; }
+  .bienvenidos {
+    max-height: 700px; }
+    .bienvenidos div p {
+      font-size: 21px; }
   .inicio {
     display: flex;
     flex-direction: column;
@@ -592,7 +604,7 @@ footer {
   .inicio__inversa {
     padding: 10px 10px; }
   .inicio__img {
-    max-width: 60%; }
+    max-width: 80%; }
   .reversa {
     flex-flow: wrap-reverse; }
   .footer_subtitulo {
@@ -640,6 +652,8 @@ footer {
   .grilla_simulador {
     grid-template-columns: 1fr;
     grid-template-areas: "imgsim"  "infsimulador1" "infsimulador2"; }
+  .carousel-item {
+    max-height: 308px; }
   .informacion_titulo {
     font-size: 30px; }
   .informacion_parrafo {
